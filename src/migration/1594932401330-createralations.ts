@@ -15,6 +15,7 @@ export class createralations1594932401330 implements MigrationInterface {
       await queryRunner.query(
         `ALTER TABLE comentario ADD userId uuid NOT NULL;`
       );
+
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
