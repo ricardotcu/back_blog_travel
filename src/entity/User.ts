@@ -1,6 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
 import { Post } from '../entity/Post';
 import { Favorito } from '../entity/Favorito'
+import { Comentario } from '../entity/Comentario'
 
 @Entity('user')
 export class User{
@@ -24,4 +25,7 @@ export class User{
 
   @OneToMany(type => Favorito, user => User)
   favoritos: Favorito[];
+
+  @OneToMany(type => Comentario, user => User)
+  comentarios: Comentario[];
 }

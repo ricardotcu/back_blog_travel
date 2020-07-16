@@ -22,7 +22,7 @@ class createTables1594931103334 {
         CONSTRAINT "PK_239512aefbb11a5b2fa92696828" PRIMARY KEY ("id"))`);
     await queryRunner.query(`CREATE TABLE "comentario" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
         "descricao" character varying(100) NOT NULL,
-        CONSTRAINT "UQ_da7f210baab523048c0386c3463" UNIQUE ("email"), 
+        CONSTRAINT "UQ_da7f210baab523048c0386c3463" UNIQUE ("descricao"), 
         CONSTRAINT "PK_339512aefbb11a5b2fa92696828" PRIMARY KEY ("id"))`);
     await queryRunner.query(`CREATE TABLE "favorito" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
         "id_user" uuid NOT NULL,
