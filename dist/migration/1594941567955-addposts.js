@@ -11,67 +11,67 @@ class addposts1594941567955 {
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        'fd0eecba-2d33-4e94-a20f-bdb356e4d50d')`);
+        '8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '0710da4b-f5a5-456e-9172-c12dcfa8455b')`);
+        '9594cd3d-7943-42db-8bc3-aaadc5a47c87')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '4fc4b920-7350-4beb-9290-2647e527768e')`);
+        '9594cd3d-7943-42db-8bc3-aaadc5a47c87')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '4fc4b920-7350-4beb-9290-2647e527768e')`);
+        'ed44f862-0663-4586-b0c8-3527be16736c')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '4fc4b920-7350-4beb-9290-2647e527768e')`);
+        'ed44f862-0663-4586-b0c8-3527be16736c')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '4fc4b920-7350-4beb-9290-2647e527768e')`);
+        'ed44f862-0663-4586-b0c8-3527be16736c')`);
     await queryRunner.query(`INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving Heart is the Truest Wisdom', 
         'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
         Nihil quod.', 
         '../../assets/images/image_1.jpg', 
-        '4fc4b920-7350-4beb-9290-2647e527768e')`);
+        'ed44f862-0663-4586-b0c8-3527be16736c')`);
   }
 
   async down(queryRunner) {}
