@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import cors from 'cors';
-import { getHome } from './controllers/HomeController';
+import { getHome, getusers } from './controllers/HomeController';
 
 const routes = Router();
 
@@ -22,10 +22,11 @@ const options:cors.CorsOptions = {
   preflightContinue: false
 };
 
-//use cors middleware
+//use cors middlewares
 routes.use(cors(options));
 
 routes.get('/', getHome); //feito
+routes.get('/users', getusers); //feito
 
 //middleware autenticacao
 //routes.use(auth);
