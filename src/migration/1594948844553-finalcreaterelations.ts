@@ -1,8 +1,21 @@
-import {MigrationInterface, QueryRunner} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class finalcreaterelations1594948844553 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.query(
+          `ALTER TABLE "post" ADD "userId" uuid;`
+        );
+        await queryRunner.query(
+          `ALTER TABLE "favorito" ADD "userId" uuid;`
+        );
+        await queryRunner.query(
+          `ALTER TABLE "comentario" ADD "postId" uuid;`
+        );
+        await queryRunner.query(
+          `ALTER TABLE "comentario" ADD "userId" uuid;`
+        );
+
         await queryRunner.query(
             `ALTER TABLE "post" ADD CONSTRAINT "FK_2652456e912c983cde73d3281db" FOREIGN KEY ("userId") REFERENCES "user"("id") ON DELETE NO ACTION ON UPDATE NO ACTION`
         );
