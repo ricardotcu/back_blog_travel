@@ -16,10 +16,10 @@ export class Post {
   @Column("varchar")
   caminho: string;
 
-  @ManyToOne(type => User, posts => Post)
+  @ManyToOne(type => User, user => user.posts)
   user: User;
 
-  @OneToMany(type => Comentario, post => Post)
+  @OneToMany(type => Comentario, comentario => comentario.post)
   comentarios: Comentario[];
    
 }

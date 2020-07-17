@@ -23,7 +23,7 @@ function _initializerWarningHelper(descriptor, context) { throw new Error('Decor
 
 let User = (_dec = (0, _typeorm.Entity)('user'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("varchar"), _dec5 = (0, _typeorm.Column)("varchar"), _dec6 = (0, _typeorm.Column)("varchar", {
   nullable: true
-}), _dec7 = (0, _typeorm.OneToMany)(type => _Post.Post, user => User), _dec8 = (0, _typeorm.OneToMany)(type => _Favorito.Favorito, user => User), _dec9 = (0, _typeorm.OneToMany)(type => _Comentario.Comentario, user => User), _dec(_class = (_class2 = (_temp = class User {
+}), _dec7 = (0, _typeorm.OneToMany)(type => _Post.Post, post => post.user), _dec8 = (0, _typeorm.OneToMany)(type => _Favorito.Favorito, favorito => favorito.user), _dec9 = (0, _typeorm.OneToMany)(type => _Comentario.Comentario, comentario => comentario.user), _dec(_class = (_class2 = (_temp = class User {
   constructor() {
     _initializerDefineProperty(this, "id", _descriptor, this);
 

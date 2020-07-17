@@ -10,9 +10,9 @@ export class Comentario{
   @Column("varchar")
   descricao: string;
 
-  @ManyToOne(type => Post, comentarios => Comentario)
+  @ManyToOne(type => Post, post => post.comentarios)
   post: Post;
 
-  @ManyToOne(type => User, comentarios => Comentario)
+  @ManyToOne(type => User, user => user.comentarios)
   user: User;
 }

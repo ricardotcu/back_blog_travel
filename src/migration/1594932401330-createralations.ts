@@ -2,7 +2,7 @@ import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class createralations1594932401330 implements MigrationInterface {
 
-    public async up(queryRunner: QueryRunner): Promise<void> {
+    public async up(queryRunner: QueryRunner): Promise<void> {/*
       await queryRunner.query(
         `ALTER TABLE post ADD userid uuid NOT NULL;`
       );
@@ -14,7 +14,7 @@ export class createralations1594932401330 implements MigrationInterface {
       );
       await queryRunner.query(
         `ALTER TABLE comentario ADD userid uuid NOT NULL;`
-      );
+      );*/
 
     }
 

@@ -1,8 +1,8 @@
 import {MigrationInterface, QueryRunner} from "typeorm";
 
-export class createTables1594931103334 implements MigrationInterface {
+export class finalcreatetable1594948513821 implements MigrationInterface {
 
-    public async up(queryRunner: QueryRunner): Promise<void> {/*
+    public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.query(
         `CREATE TABLE "user" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
         "nome" character varying(100) NOT NULL, 
@@ -26,9 +26,9 @@ export class createTables1594931103334 implements MigrationInterface {
       );
       await queryRunner.query(
         `CREATE TABLE "favorito" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
-        "id_user" uuid NOT NULL, 
+        "id_user" uuid, 
         CONSTRAINT "PK_439512aefbb11a5b2fa92696828" PRIMARY KEY ("id"))`,
-      );*/
+      );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

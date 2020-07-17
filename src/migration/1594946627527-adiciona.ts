@@ -2,7 +2,7 @@ import {MigrationInterface, QueryRunner} from "typeorm";
 
 export class adiciona1594946627527 implements MigrationInterface {
 
-    public async up(queryRunner: QueryRunner): Promise<void> {
+    public async up(queryRunner: QueryRunner): Promise<void> {/*
         await queryRunner.query(
             `INSERT INTO "post" ("titulo", "descricao", "caminho", "userid") VALUES ('A Loving xHeart is the Truest Wisdom', 
             'Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. 
@@ -93,7 +93,7 @@ export class adiciona1594946627527 implements MigrationInterface {
             Nihilquod.', 
             '../../assets/images/image_1.jpg', 
             '070e6025-9bdc-4550-991a-72f44c3ee0ee')`
-          );
+          );*/
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

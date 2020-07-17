@@ -20,12 +20,12 @@ export class User{
   @Column("varchar", { nullable: true })
   caminho: string;
 
-  @OneToMany(type => Post, user => User)
+  @OneToMany(type => Post, post => post.user)
   posts: Post[];
 
-  @OneToMany(type => Favorito, user => User)
+  @OneToMany(type => Favorito, favorito => favorito.user)
   favoritos: Favorito[];
 
-  @OneToMany(type => Comentario, user => User)
+  @OneToMany(type => Comentario, comentario => comentario.user)
   comentarios: Comentario[];
 }

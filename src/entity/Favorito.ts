@@ -9,6 +9,6 @@ export class Favorito{
   @Column("uuid")
   id_user: number;
 
-  @ManyToOne(type => User, favoritos => Favorito)
+  @ManyToOne(type => User, user => user.favoritos)
   user: User;
 }
