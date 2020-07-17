@@ -24,11 +24,13 @@ const login = async (req, res) => {
     senha
   } = req.body;
   const secret = "84edbc64b2e424f48fd21c08e26d9dd9";
+  console.log(email);
   const user = await (0, _typeorm.getRepository)(_User.User).find({
     where: {
       email
     }
   });
+  console.log(user);
 
   if (user.length === 1) {
     if (await bcrypt.compare(senha, user[0].senha)) {

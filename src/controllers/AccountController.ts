@@ -8,13 +8,14 @@ import { User } from '../entity/User';
 export const login = async (req: Request, res: Response) => {
   const { email, senha} = req.body;
   const secret = "84edbc64b2e424f48fd21c08e26d9dd9";
+  console.log(email)
 
   const user = await getRepository(User).find({
       where: {
           email
       }
   });
-  
+  console.log(user)
   if(user.length === 1){ 
       if(await bcrypt.compare(senha, user[0].senha)){
           const token = jwt.sign({ id: user[0].id }, secret, {
