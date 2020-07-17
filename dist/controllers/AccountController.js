@@ -65,24 +65,17 @@ exports.login = login;
 const register = async (req, res) => {
   const {
     nome,
-    sobrenome,
     email,
-    senha,
-    cargo,
-    rg,
-    cpf
+    senha
   } = req.body;
   const senha_hash = await bcrypt.hash(senha, 8);
-  const users = await (0, _typeorm.getRepository)(_User.User).save({
+  const user = await (0, _typeorm.getRepository)(_User.User).save({
     nome,
-    sobrenome,
     email,
-    senha: senha_hash,
-    cargo,
-    rg,
-    cpf
+    senha: senha_hash
   });
-  return res.json(users);
+  console.log(user);
+  return res.json(user);
 };
 
 exports.register = register;

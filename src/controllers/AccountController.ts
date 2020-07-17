@@ -44,19 +44,16 @@ export const login = async (req: Request, res: Response) => {
 
 //REGISTER
 export const register = async (req: Request, res: Response) => {
-  const { nome, sobrenome, email, senha, cargo, rg, cpf } = req.body;
+  const { nome, email, senha } = req.body;
 
   const senha_hash = await bcrypt.hash(senha, 8);
 
-  const users = await getRepository(User).save({
+  const user = await getRepository(User).save({
       nome,
-      sobrenome,
       email,
-      senha: senha_hash,
-      cargo,
-      rg,
-      cpf
+      senha: senha_hash
   });
-  return res.json(users);
+  console.log(user)
+  return res.json(user);
   
 }
