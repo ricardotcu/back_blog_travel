@@ -24,7 +24,7 @@ export const login = async (req: Request, res: Response) => {
       });
       const data1 = await getRepository(User).find(
       {
-        relations: ["post", "comentario", "favorito"],
+        relations: ["posts", "comentarios", "favoritos"],
         where: {email}
       });
       

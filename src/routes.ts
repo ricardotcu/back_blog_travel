@@ -22,7 +22,9 @@ const options:cors.CorsOptions = {
     "*",
     "https://quizzical-villani-cc5e6f.netlify.app",
     "https://quizzical-villani-cc5e6f.netlify.app/",
-    "https://quizzical-villani-cc5e6f.netlify.app/home"
+    "https://quizzical-villani-cc5e6f.netlify.app/home",
+    "https://quizzical-villani-cc5e6f.netlify.app/login",
+    "https://quizzical-villani-cc5e6f.netlify.app/register"
   ],
   preflightContinue: false
 };
