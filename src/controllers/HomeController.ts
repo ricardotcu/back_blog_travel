@@ -4,7 +4,7 @@ import { Post } from '../entity/Post';
 import { User } from '../entity/User';
 
 //retorna os produtos da home page, produtos marcados como mais vendidos
-export const getHome = async (req: Request, res: Response) => {
+export const home = async (req: Request, res: Response) => {
 
     const posts = await getRepository(Post).find({ relations: ["user"] });
 
@@ -12,7 +12,7 @@ export const getHome = async (req: Request, res: Response) => {
 }
 
 //retorna os produtos da home page, produtos marcados como mais vendidos
-export const getusers = async (req: Request, res: Response) => {
+export const users = async (req: Request, res: Response) => {
 
     const posts = await getRepository(User).find();
 

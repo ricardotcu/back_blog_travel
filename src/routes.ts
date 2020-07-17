@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import cors from 'cors';
-import { getHome, getusers } from './controllers/HomeController';
+import { home, users } from './controllers/HomeController';
+import { login, register } from './controllers/AccountController';
+import { auth } from './middlewares/auth';
 
 const routes = Router();
 
@@ -28,12 +30,14 @@ const options:cors.CorsOptions = {
 //use cors middlewares
 routes.use(cors(options));
 
-routes.get('/', getHome); //feito
-routes.get('/home', getHome); //feito
-routes.get('/users', getusers); //feito
+routes.get('/', home); //feito
+routes.get('/home', home); //feito
+routes.get('/users', users); //feito
+routes.post('/login', login); //feito
+routes.post('/register', register); //feito
 
 //middleware autenticacao
-//routes.use(auth);
+routes.use(auth);
 
 
 export default routes;

@@ -11,6 +11,10 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _HomeController = require("./controllers/HomeController");
 
+var _AccountController = require("./controllers/AccountController");
+
+var _auth = require("./middlewares/auth");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const routes = (0, _express.Router)(); //opçoes para cors midddleware
@@ -24,13 +28,17 @@ const options = {
 }; //use cors middlewares
 
 routes.use((0, _cors.default)(options));
-routes.get('/', _HomeController.getHome); //feito
+routes.get('/', _HomeController.home); //feito
 
-routes.get('/home', _HomeController.getHome); //feito
+routes.get('/home', _HomeController.home); //feito
 
-routes.get('/users', _HomeController.getusers); //feito
+routes.get('/users', _HomeController.users); //feito
+
+routes.post('/login', _AccountController.login); //feito
+
+routes.post('/register', _AccountController.register); //feito
 //middleware autenticacao
-//routes.use(auth);
 
+routes.use(_auth.auth);
 var _default = routes;
 exports.default = _default;
