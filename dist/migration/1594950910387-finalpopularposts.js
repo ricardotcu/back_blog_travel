@@ -72,16 +72,16 @@ class finalpopularposts1594950910387 {
           Nihilquod.', 
           '../../assets/images/image_1.jpg', 
           '7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('9594cd3d-7943-42db-8bc3-aaadc5a47c87')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('9594cd3d-7943-42db-8bc3-aaadc5a47c87')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('8f9f24b1-be1b-4639-b976-65b5d72d10c9')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
-    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('ed44f862-0663-4586-b0c8-3527be16736c')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`);
+    await queryRunner.query(`INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`);
   }
 
   async down(queryRunner) {}
