@@ -28,6 +28,7 @@ const options:cors.CorsOptions = {
 routes.use(cors(options));
 
 routes.get('/', getHome); //feito
+routes.get('/home', getHome); //feito
 routes.get('/users', getusers); //feito
 
 //middleware autenticacao
