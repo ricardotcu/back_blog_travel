@@ -45,7 +45,6 @@ const login = async (req, res) => {
           email
         }
       });
-      console.log(data1);
       return res.json(data1);
     } else {
       return res.status(404).json({

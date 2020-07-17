@@ -3,7 +3,6 @@ import { getRepository } from 'typeorm';
 import * as bcrypt from 'bcrypt';
 import * as jwt from 'jsonwebtoken';
 import { User } from '../entity/User';
-import { Comentario } from '../entity/Comentario';
 
 //LOGIN
 export const login = async (req: Request, res: Response) => {
@@ -18,18 +17,18 @@ export const login = async (req: Request, res: Response) => {
   });
   console.log(user)
   if(user.length === 1){ 
-    if(await bcrypt.compare(senha, user[0].senha)){
+    if (await bcrypt.compare(senha, user[0].senha)) {
+      
       const token = jwt.sign({ id: user[0].id }, secret, {
           expiresIn: '1d'
       });
+
       const data1 = await getRepository(User).find(
       {
         relations: ["posts", "comentarios", "favoritos"],
         where: {email}
       });
       
-      console.log(data1)
-
       return res.json(data1);
     }
     else{
