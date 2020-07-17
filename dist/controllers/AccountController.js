@@ -39,13 +39,14 @@ const login = async (req, res) => {
       }, secret, {
         expiresIn: '1d'
       });
-      const data = {
-        id: user[0].id,
-        nome: user[0].nome,
-        email: user[0].email,
-        token
-      };
-      return res.json(data);
+      const data1 = await (0, _typeorm.getRepository)(_User.User).find({
+        relations: ["post", "comentario", "favorito"],
+        where: {
+          email
+        }
+      });
+      console.log(data1);
+      return res.json(data1);
     } else {
       return res.status(404).json({
         message: 'user nao existe'

@@ -17,6 +17,9 @@ export class User{
   @Column("varchar")
   senha: string;
 
+  @Column("varchar")
+  token: string;
+
   @Column("varchar", { nullable: true })
   caminho: string;
 
