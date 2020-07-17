@@ -26,6 +26,8 @@ const options = {
 routes.use((0, _cors.default)(options));
 routes.get('/', _HomeController.getHome); //feito
 
+routes.get('/home', _HomeController.getHome); //feito
+
 routes.get('/users', _HomeController.getusers); //feito
 //middleware autenticacao
 //routes.use(auth);
