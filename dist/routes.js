@@ -19,7 +19,7 @@ const options = {
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-  origin: ["*", "https://quizzical-villani-cc5e6f.netlify.app/home", "https://quizzical-villani-cc5e6f.netlify.app/"],
+  origin: ["*", "https://quizzical-villani-cc5e6f.netlify.app", "https://quizzical-villani-cc5e6f.netlify.app/", "https://quizzical-villani-cc5e6f.netlify.app/home"],
   preflightContinue: false
 }; //use cors middlewares
 

@@ -18,8 +18,9 @@ const options:cors.CorsOptions = {
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   origin: [
     "*",
-    "https://quizzical-villani-cc5e6f.netlify.app/home",
-    "https://quizzical-villani-cc5e6f.netlify.app/"
+    "https://quizzical-villani-cc5e6f.netlify.app",
+    "https://quizzical-villani-cc5e6f.netlify.app/",
+    "https://quizzical-villani-cc5e6f.netlify.app/home"
   ],
   preflightContinue: false
 };
