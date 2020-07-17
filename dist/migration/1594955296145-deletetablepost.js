@@ -6,9 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.deletetablepost1594955296145 = void 0;
 
 class deletetablepost1594955296145 {
-  async up(queryRunner) {
-    `DROP TABLE "post"`;
-  }
+  async up(queryRunner) {}
 
   async down(queryRunner) {}
 
