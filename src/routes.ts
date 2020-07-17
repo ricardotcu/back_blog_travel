@@ -17,7 +17,9 @@ const options:cors.CorsOptions = {
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
   origin: [
-      "*"
+    "*",
+    "https://quizzical-villani-cc5e6f.netlify.app/home",
+    "https://quizzical-villani-cc5e6f.netlify.app/"
   ],
   preflightContinue: false
 };
@@ -26,7 +28,6 @@ const options:cors.CorsOptions = {
 routes.use(cors(options));
 
 routes.get('/', getHome); //feito
-routes.get('/home', getHome); //feito
 routes.get('/users', getusers); //feito
 
 //middleware autenticacao

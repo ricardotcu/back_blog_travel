@@ -19,14 +19,12 @@ const options = {
   allowedHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept", "X-Access-Token", "Authorization"],
   credentials: true,
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
-  origin: ["*"],
+  origin: ["*", "https://quizzical-villani-cc5e6f.netlify.app/home", "https://quizzical-villani-cc5e6f.netlify.app/"],
   preflightContinue: false
 }; //use cors middlewares
 
 routes.use((0, _cors.default)(options));
 routes.get('/', _HomeController.getHome); //feito
-
-routes.get('/home', _HomeController.getHome); //feito
 
 routes.get('/users', _HomeController.getusers); //feito
 //middleware autenticacao
