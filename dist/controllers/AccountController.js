@@ -72,7 +72,6 @@ const register = async (req, res) => {
     email,
     senha: senha_hash
   });
-  console.log(user);
   return res.json(user);
 };
 

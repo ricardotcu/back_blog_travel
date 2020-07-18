@@ -52,7 +52,7 @@ export const register = async (req: Request, res: Response) => {
       email,
       senha: senha_hash
   });
-  console.log(user)
+  
   return res.json(user);
   
 }

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.favoritos = exports.comentarios = exports.users = exports.home = void 0;
+exports.save_comentario = exports.comentarios = exports.users = exports.home = void 0;
 
 var _typeorm = require("typeorm");
 
@@ -47,6 +47,18 @@ const comentarios = async (req, res) => {
 
 exports.comentarios = comentarios;
 
-const favoritos = async (req, res) => {};
+const save_comentario = async (req, res) => {
+  const {
+    comentario,
+    userId,
+    postId
+  } = req.body;
+  const save_comentario = await (0, _typeorm.getRepository)(_Comentario.Comentario).save({
+    descricao: comentario,
+    postId,
+    userId
+  });
+  return res.json(save_comentario);
+};
 
-exports.favoritos = favoritos;
+exports.save_comentario = save_comentario;
