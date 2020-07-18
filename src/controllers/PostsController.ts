@@ -1,4 +1,4 @@
-import { ConnectionOptionsReader, getRepository } from 'typeorm';
+import { getRepository } from 'typeorm';
 import { Request, Response } from 'express';
 import { Post } from '../entity/Post';
 
@@ -6,11 +6,13 @@ import { Post } from '../entity/Post';
 export const post = async (req: Request, res: Response) => {
     const { id } = req.params;
 
-    const posts = await getRepository(Post).findOne({
+    const post = await getRepository(Post).findOne({
+        relations: ["user", "comentarios"],
+        select: ["id", "titulo", "descricao", "caminho"],
         where: {
             id
         }
     });
     
-    return res.json(posts);
+    return res.json(post);
 }

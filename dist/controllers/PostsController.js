@@ -14,12 +14,14 @@ const post = async (req, res) => {
   const {
     id
   } = req.params;
-  const posts = await (0, _typeorm.getRepository)(_Post.Post).findOne({
+  const post = await (0, _typeorm.getRepository)(_Post.Post).findOne({
+    relations: ["user", "comentarios"],
+    select: ["id", "titulo", "descricao", "caminho"],
     where: {
       id
     }
   });
-  return res.json(posts);
+  return res.json(post);
 };
 
 exports.post = post;
