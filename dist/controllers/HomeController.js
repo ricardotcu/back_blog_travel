@@ -16,9 +16,10 @@ const home = async (req, res) => {
   const posts = await (0, _typeorm.getRepository)(_Post.Post).find({
     relations: ["user"]
   });
+  console.log(posts[0].user.senha);
 
   for (let i = 0; posts.length; i++) {
-    posts[i].user.senha = null;
+    posts[i].user.senha = '';
   }
 
   return res.json(posts);
