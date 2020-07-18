@@ -40,7 +40,7 @@ const login = async (req, res) => {
         expiresIn: '1d'
       });
       const data1 = await (0, _typeorm.getRepository)(_User.User).find({
-        select: ["id", "email", "nome", "posts", "caminho"],
+        select: ["id", "email", "nome", "caminho"],
         relations: ["posts", "comentarios", "favoritos"],
         where: {
           email
