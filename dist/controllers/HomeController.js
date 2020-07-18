@@ -16,6 +16,11 @@ const home = async (req, res) => {
   const posts = await (0, _typeorm.getRepository)(_Post.Post).find({
     relations: ["user"]
   });
+
+  for (let i = 0; posts.length; i++) {
+    posts[i].user.senha = null;
+  }
+
   return res.json(posts);
 }; //retorna os produtos da home page, produtos marcados como mais vendidos
 

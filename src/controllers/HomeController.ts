@@ -7,6 +7,10 @@ import { User } from '../entity/User';
 export const home = async (req: Request, res: Response) => {
 
     const posts = await getRepository(Post).find({ relations: ["user"] });
+    
+    for (let i = 0; posts.length; i++){
+        posts[i].user.senha = null;
+    }
 
     return res.json(posts);
 }
