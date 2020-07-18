@@ -38,6 +38,8 @@ routes.get('/post/:id', _PostsController.post); //feito
 
 routes.get('/users', _HomeController.users); //feito
 
+routes.get('/favoritos', _HomeController.favoritos); //feito
+
 routes.get('/comentarios', _HomeController.comentarios); //feito
 
 routes.post('/login', _AccountController.login); //feito

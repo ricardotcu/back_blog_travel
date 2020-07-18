@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import cors from 'cors';
-import { home, users, comentarios } from './controllers/HomeController';
+import { home, users, comentarios, favoritos } from './controllers/HomeController';
 import { post } from './controllers/PostsController';
 import { login, register } from './controllers/AccountController';
 import { auth } from './middlewares/auth';
@@ -37,6 +37,7 @@ routes.get('/', home); //feito
 routes.get('/home', home); //feito
 routes.get('/post/:id', post); //feito
 routes.get('/users', users); //feito
+routes.get('/favoritos', favoritos); //feito
 routes.get('/comentarios', comentarios); //feito
 routes.post('/login', login); //feito
 routes.post('/register', register); //feito

@@ -39,3 +39,8 @@ export const comentarios = async (req: Request, res: Response) => {
 
     return res.json(users);
 }
+
+//retorna os produtos da home page, produtos marcados como mais vendidos
+export const favoritos = async (req: Request, res: Response) => {
+    
+}

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.comentarios = exports.users = exports.home = void 0;
+exports.favoritos = exports.comentarios = exports.users = exports.home = void 0;
 
 var _typeorm = require("typeorm");
 
@@ -42,6 +42,11 @@ const comentarios = async (req, res) => {
     relations: ["post", "user"]
   });
   return res.json(users);
-};
+}; //retorna os produtos da home page, produtos marcados como mais vendidos
+
 
 exports.comentarios = comentarios;
+
+const favoritos = async (req, res) => {};
+
+exports.favoritos = favoritos;
