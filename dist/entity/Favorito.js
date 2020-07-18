@@ -9,7 +9,9 @@ var _typeorm = require("typeorm");
 
 var _User = require("../entity/User");
 
-var _dec, _dec2, _dec3, _dec4, _class, _class2, _descriptor, _descriptor2, _descriptor3, _temp;
+var _Post = require("../entity/Post");
+
+var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _temp;
 
 function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -17,13 +19,15 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 
 function _initializerWarningHelper(descriptor, context) { throw new Error('Decorating class property failed. Please ensure that ' + 'proposal-class-properties is enabled and runs after the decorators transform.'); }
 
-let Favorito = (_dec = (0, _typeorm.Entity)('favorito'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("uuid"), _dec4 = (0, _typeorm.ManyToOne)(type => _User.User, user => user.favoritos), _dec(_class = (_class2 = (_temp = class Favorito {
+let Favorito = (_dec = (0, _typeorm.Entity)('favorito'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("uuid"), _dec4 = (0, _typeorm.ManyToMany)(type => _Post.Post), _dec5 = (0, _typeorm.JoinTable)(), _dec6 = (0, _typeorm.ManyToOne)(type => _User.User, user => user.favoritos), _dec(_class = (_class2 = (_temp = class Favorito {
   constructor() {
     _initializerDefineProperty(this, "id", _descriptor, this);
 
     _initializerDefineProperty(this, "id_user", _descriptor2, this);
 
-    _initializerDefineProperty(this, "user", _descriptor3, this);
+    _initializerDefineProperty(this, "posts", _descriptor3, this);
+
+    _initializerDefineProperty(this, "user", _descriptor4, this);
   }
 
 }, _temp), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, "id", [_dec2], {
@@ -36,7 +40,12 @@ let Favorito = (_dec = (0, _typeorm.Entity)('favorito'), _dec2 = (0, _typeorm.Pr
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "user", [_dec4], {
+}), _descriptor3 = _applyDecoratedDescriptor(_class2.prototype, "posts", [_dec4, _dec5], {
+  configurable: true,
+  enumerable: true,
+  writable: true,
+  initializer: null
+}), _descriptor4 = _applyDecoratedDescriptor(_class2.prototype, "user", [_dec6], {
   configurable: true,
   enumerable: true,
   writable: true,
