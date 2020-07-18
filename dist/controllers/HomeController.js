@@ -53,11 +53,15 @@ const save_comentario = async (req, res) => {
     userId,
     postId
   } = req.body;
+  console.log(comentario);
+  console.log(userId);
+  console.log(postId);
   const save_comentario = await (0, _typeorm.getRepository)(_Comentario.Comentario).save({
     descricao: comentario,
     postId,
     userId
   });
+  console.log(save_comentario);
   return res.json(save_comentario);
 };
 

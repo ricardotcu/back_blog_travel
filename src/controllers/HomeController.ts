@@ -43,12 +43,17 @@ export const comentarios = async (req: Request, res: Response) => {
 //retorna os produtos da home page, produtos marcados como mais vendidos
 export const save_comentario = async (req: Request, res: Response) => {
     const { comentario, userId, postId } = req.body;
+    console.log(comentario)
+    console.log(userId)
+    console.log(postId)
 
     const save_comentario = await getRepository(Comentario).save({
         descricao: comentario,
         postId,
         userId
     });
+
+    console.log(save_comentario)
 
     return res.json(save_comentario);
 }
