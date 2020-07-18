@@ -40,7 +40,7 @@ routes.get('/users', _HomeController.users); //feito
 
 routes.get('/comentarios', _HomeController.comentarios); //feito
 
-routes.get('/favoritos', _HomeController.favoritos); //feito
+routes.get('/favoritos', favoritos); //feito
 
 routes.post('/login', _AccountController.login); //feito
 

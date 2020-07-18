@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import cors from 'cors';
-import { home, users, favoritos, comentarios } from './controllers/HomeController';
+import { home, users, comentarios } from './controllers/HomeController';
 import { post } from './controllers/PostsController';
 import { login, register } from './controllers/AccountController';
 import { auth } from './middlewares/auth';
