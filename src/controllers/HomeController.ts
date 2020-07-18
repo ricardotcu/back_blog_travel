@@ -1,7 +1,8 @@
-import { ConnectionOptionsReader, getRepository } from 'typeorm';
+import { getRepository } from 'typeorm';
 import { Request, Response } from 'express';
 import { Post } from '../entity/Post';
 import { User } from '../entity/User';
+import { Comentario } from '../entity/Comentario';
 
 //retorna os produtos da home page, produtos marcados como mais vendidos
 export const home = async (req: Request, res: Response) => {
@@ -18,7 +19,23 @@ export const home = async (req: Request, res: Response) => {
 //retorna os produtos da home page, produtos marcados como mais vendidos
 export const users = async (req: Request, res: Response) => {
 
-    const posts = await getRepository(User).find();
+    const users = await getRepository(User).find(
+        {
+            select: ["id", "nome", "email", "caminho"],
+            relations: ["posts", "comentarios", "favoritos"]
+        });
 
-    return res.json(posts);
+    return res.json(users);
+}
+
+//retorna os produtos da home page, produtos marcados como mais vendidos
+export const comentarios = async (req: Request, res: Response) => {
+
+    const users = await getRepository(Comentario).find(
+        {
+            select: ["id", "descricao"],
+            relations: ["post", "user"]
+        });
+
+    return res.json(users);
 }

@@ -9,11 +9,9 @@ var _typeorm = require("typeorm");
 
 var _Post = require("../entity/Post");
 
-var _Favorito = require("../entity/Favorito");
-
 var _Comentario = require("../entity/Comentario");
 
-var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp;
+var _dec, _dec2, _dec3, _dec4, _dec5, _dec6, _dec7, _dec8, _dec9, _dec10, _class, _class2, _descriptor, _descriptor2, _descriptor3, _descriptor4, _descriptor5, _descriptor6, _descriptor7, _descriptor8, _temp;
 
 function _initializerDefineProperty(target, property, descriptor, context) { if (!descriptor) return; Object.defineProperty(target, property, { enumerable: descriptor.enumerable, configurable: descriptor.configurable, writable: descriptor.writable, value: descriptor.initializer ? descriptor.initializer.call(context) : void 0 }); }
 
@@ -23,7 +21,7 @@ function _initializerWarningHelper(descriptor, context) { throw new Error('Decor
 
 let User = (_dec = (0, _typeorm.Entity)('user'), _dec2 = (0, _typeorm.PrimaryGeneratedColumn)("uuid"), _dec3 = (0, _typeorm.Column)("varchar"), _dec4 = (0, _typeorm.Column)("varchar"), _dec5 = (0, _typeorm.Column)("varchar"), _dec6 = (0, _typeorm.Column)("varchar", {
   nullable: true
-}), _dec7 = (0, _typeorm.OneToMany)(type => _Post.Post, post => post.user), _dec8 = (0, _typeorm.OneToMany)(type => _Favorito.Favorito, favorito => favorito.user), _dec9 = (0, _typeorm.OneToMany)(type => _Comentario.Comentario, comentario => comentario.user), _dec(_class = (_class2 = (_temp = class User {
+}), _dec7 = (0, _typeorm.OneToMany)(type => _Post.Post, post => post.user), _dec8 = (0, _typeorm.ManyToMany)(type => _Post.Post), _dec9 = (0, _typeorm.JoinTable)(), _dec10 = (0, _typeorm.OneToMany)(type => _Comentario.Comentario, comentario => comentario.user), _dec(_class = (_class2 = (_temp = class User {
   constructor() {
     _initializerDefineProperty(this, "id", _descriptor, this);
 
@@ -72,12 +70,12 @@ let User = (_dec = (0, _typeorm.Entity)('user'), _dec2 = (0, _typeorm.PrimaryGen
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "favoritos", [_dec8], {
+}), _descriptor7 = _applyDecoratedDescriptor(_class2.prototype, "favoritos", [_dec8, _dec9], {
   configurable: true,
   enumerable: true,
   writable: true,
   initializer: null
-}), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "comentarios", [_dec9], {
+}), _descriptor8 = _applyDecoratedDescriptor(_class2.prototype, "comentarios", [_dec10], {
   configurable: true,
   enumerable: true,
   writable: true,

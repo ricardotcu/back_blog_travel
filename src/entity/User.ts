@@ -1,6 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, ManyToMany, JoinTable } from 'typeorm';
 import { Post } from '../entity/Post';
-import { Favorito } from '../entity/Favorito'
 import { Comentario } from '../entity/Comentario'
 
 @Entity('user')
@@ -23,8 +22,9 @@ export class User{
   @OneToMany(type => Post, post => post.user)
   posts: Post[];
 
-  @OneToMany(type => Favorito, favorito => favorito.user)
-  favoritos: Favorito[];
+  @ManyToMany(type => Post)
+  @JoinTable()
+  favoritos: Post[];
 
   @OneToMany(type => Comentario, comentario => comentario.user)
   comentarios: Comentario[];

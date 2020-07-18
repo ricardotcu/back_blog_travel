@@ -94,38 +94,6 @@ export class finalpopularposts1594950910387 implements MigrationInterface {
           '../../assets/images/image_1.jpg', 
           '7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
         );
-
-
-        await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`
-          );
-          await queryRunner.query(
-            `INSERT INTO "favorito" ("userId") VALUES ('982bb0eb-4749-4cab-9479-aa34d22d62ed')`
-          );
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {

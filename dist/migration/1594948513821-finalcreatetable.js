@@ -22,9 +22,6 @@ class finalcreatetable1594948513821 {
     await queryRunner.query(`CREATE TABLE "comentario" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
         "descricao" character varying(100) NOT NULL,
         CONSTRAINT "PK_339512aefbb11a5b2fa92696828" PRIMARY KEY ("id"))`);
-    await queryRunner.query(`CREATE TABLE "favorito" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), 
-        "id_user" uuid, 
-        CONSTRAINT "PK_439512aefbb11a5b2fa92696828" PRIMARY KEY ("id"))`);
   }
 
   async down(queryRunner) {}
