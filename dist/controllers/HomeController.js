@@ -14,8 +14,8 @@ var _User = require("../entity/User");
 //retorna os produtos da home page, produtos marcados como mais vendidos
 const home = async (req, res) => {
   const posts = await (0, _typeorm.getRepository)(_Post.Post).find({
-    relations: ["user", "comentario"],
-    select: ["id", "titulo", "descricao", "caminho", "user", "comentarios"]
+    relations: ["user", "comentarios"],
+    select: ["id", "titulo", "descricao", "caminho"]
   });
   console.log(posts);
   return res.json(posts);
