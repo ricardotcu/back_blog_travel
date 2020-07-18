@@ -65,19 +65,19 @@ export class addcomentarios1595056156369 implements MigrationInterface {
 
     await queryRunner.query(
       `INSERT INTO "favpost" ("userId", "postId") VALUES ('666c0df3-4af7-48f7-ab3e-54a703fee1a6',
-      '42d680d8-5895-43da-bafa-abfd1c113827')`
+      '9a8a0c88-475f-485c-b944-abb11bf19a10')`
     );
     await queryRunner.query(
       `INSERT INTO "favpost" ("userId", "postId") VALUES ('666c0df3-4af7-48f7-ab3e-54a703fee1a6',
-      '7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
+      '0441b43a-ab8a-419d-b986-7ec456e43542')`
     );
     await queryRunner.query(
       `INSERT INTO "favpost" ("userId", "postId") VALUES ('666c0df3-4af7-48f7-ab3e-54a703fee1a6',
-      '42d680d8-5895-43da-bafa-abfd1c113827')`
+      '028ec9b4-bbcc-49e6-bd60-77dc91ffd485')`
     );
     await queryRunner.query(
-      `INSERT INTO "favpost" ("userId", "postId") VALUES ('daea73a1-4aea-4f93-a567-b793a733e3e0',
-      '7e8d05a7-0a19-4bfc-b9ad-fd1458c6ede2')`
+      `INSERT INTO "favpost" ("userId", "postId") VALUES ('42d680d8-5895-43da-bafa-abfd1c113827',
+      '9a8a0c88-475f-485c-b944-abb11bf19a10')`
     );
   }
     
