@@ -10,6 +10,7 @@ export class addcomentarios1595056156369 implements MigrationInterface {
     await queryRunner.query(
       `CREATE TABLE "favpost" ("userId" uuid NOT NULL, "postId" uuid NOT NULL, CONSTRAINT "PK_3ef0759852caaefb9bac7cf913e" PRIMARY KEY ("userId", "postId"))`
     );
+    
     await queryRunner.query(
       `ALTER TABLE "favpost" ADD CONSTRAINT "FK_ccb4ae4609bfbf4d022560a3f8c" FOREIGN KEY ("postId") REFERENCES "post"("id") ON DELETE CASCADE ON UPDATE NO ACTION`,
     );
