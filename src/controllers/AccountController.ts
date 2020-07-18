@@ -25,6 +25,7 @@ export const login = async (req: Request, res: Response) => {
 
       const data1 = await getRepository(User).find(
       {
+        select: ["id", "email", "nome", "posts", "caminho"],
         relations: ["posts", "comentarios", "favoritos"],
         where: {email}
       });
