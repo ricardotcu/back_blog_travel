@@ -38,7 +38,6 @@ routes.get('/home', home); //feito
 routes.get('/post/:id', post); //feito
 routes.get('/users', users); //feito
 routes.get('/comentarios', comentarios); //feito
-routes.get('/favoritos', favoritos); //feito
 routes.post('/login', login); //feito
 routes.post('/register', register); //feito
 
