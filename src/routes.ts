@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import cors from 'cors';
 import { home, users } from './controllers/HomeController';
+import { post } from './controllers/PostsController';
 import { login, register } from './controllers/AccountController';
 import { auth } from './middlewares/auth';
 
@@ -34,6 +35,7 @@ routes.use(cors(options));
 
 routes.get('/', home); //feito
 routes.get('/home', home); //feito
+routes.get('/post/:id', post); //feito
 routes.get('/users', users); //feito
 routes.post('/login', login); //feito
 routes.post('/register', register); //feito

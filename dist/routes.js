@@ -11,6 +11,8 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _HomeController = require("./controllers/HomeController");
 
+var _PostsController = require("./controllers/PostsController");
+
 var _AccountController = require("./controllers/AccountController");
 
 var _auth = require("./middlewares/auth");
@@ -31,6 +33,8 @@ routes.use((0, _cors.default)(options));
 routes.get('/', _HomeController.home); //feito
 
 routes.get('/home', _HomeController.home); //feito
+
+routes.get('/post/:id', _PostsController.post); //feito
 
 routes.get('/users', _HomeController.users); //feito
 

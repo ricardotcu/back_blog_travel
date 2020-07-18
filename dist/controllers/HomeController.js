@@ -17,7 +17,6 @@ const home = async (req, res) => {
     relations: ["user", "comentarios"],
     select: ["id", "titulo", "descricao", "caminho"]
   });
-  console.log(posts);
   return res.json(posts);
 }; //retorna os produtos da home page, produtos marcados como mais vendidos
 
